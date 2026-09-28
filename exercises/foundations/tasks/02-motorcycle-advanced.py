@@ -177,7 +177,7 @@ print(f"1800 valid? {Motorcycle.is_valid_year(1800)}")
 try:
     m1.engine_cc = 0
 except ValueError as e:
-    print(f"engine_cc = 0 → {e}")
+    print(f"engine_cc = 0 -> {e}")
 
 
 # ==========================================

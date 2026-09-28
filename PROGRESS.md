@@ -107,19 +107,20 @@
 - Dlaczego from_string() to classmethod (jajko i kura)
 - _count = zmienna klasy (shared między instancjami)
 
-**Do poprawy:**
-- from_string() — brak int() na engine_cc (linia 128)
-- Unicode error na → w tescie (Windows)
+**Do poprawy (zrobione):**
+- ✅ from_string() — dodano int() na engine_cc (linia 128)
+- ✅ Unicode error na → w print() — zamieniono na -> 
 
 ---
 
 ## Do zrobienia przed nastepna sesja
 
-### Zadanie 02 — popraw engine_cc:
+### Zadanie 02 — ✅ poprawione:
 ```python
 # Linia 128 w from_string():
-engine_cc = int(parsed[3])  # bylo: parsed[3]
+engine_cc = int(parsed[3])  # DONE
 ```
+# Unicode error tez naprawiony (-> zamiast → w print)
 
 ### Zadanie 03 — nowe:
 1. ETAP 1: calculate_bmi() + get_bmi_category()

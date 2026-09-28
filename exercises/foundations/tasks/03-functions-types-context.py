@@ -144,7 +144,7 @@ def create_person(name: str, *hobbies: str, **extra) -> dict:
 #
 # Przyklad:
 #   build_url("https://example.com", "api", "users", page=1, limit=10)
-#   → "https://example.com/api/users?page=1&limit=10"
+#   -> "https://example.com/api/users?page=1&limit=10"
 #
 # Wskazowki:
 # - "/".join(laczycie sciezki)
