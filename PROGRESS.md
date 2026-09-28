@@ -1,108 +1,131 @@
 # Pythonizator — Postępy w nauce
 
-## Status: Miesiąc 1 — Fundamenty Pythona (sprint)
-
-**Cel ogólny:** Software Engineer / Platform Engineer (Python + Go)
-**Czas nauki:** TBD (do ustalenia)
-**Aktualny poziom Pythona:** TBD (do ustalenia)
-
----
-
-## Miesiąc 1: Fundamenty Pythona — sprint
-
-- [ ] Składnia: zmienne, typy, operatory
-- [ ] Kolekcje: listy, krotki, słowniki, zbiory
-- [ ] Kontrola przepływu: if/elif/else, for, while
-- [ ] Funkcje: argumenty, *args, **kwargs, domknięcia
-- [ ] Comprehensions: list, dict, set
-- [ ] Obsługa błędów: try/except/finally, własne wyjątki
-- [ ] Moduły i pakiety: import, __init__.py, pip
-- [ ] Praca z plikami: open, context managers
-
-**Zadania:**
-- [ ] Parser plików CSV z danymi o motocyklach
-- [ ] Kalkulator spalania paliwa z obsługą błędów
-- [ ] System logowania z poziomami
-- [ ] Prosty CLI do zarządzania listą zadań
+## Cel: Python Developer (mid) — rozmowa za ~1 rok
+**Profil:** 10+ lat w IT (integracja, firewalle, K8s, DB, Linux, Windows, AD)
+**Background:** Java (Spring, Hibernate, modyfikatory), podstawy React
+**Cel:** Zmienic prace z integratora na Python Developera
+**Podejscie:** Uczymy sie czytac, rozumiec i oceniac kod. Nie klepamy tutoriali.
+**Czas:** 2-3h tygodniowo
+**Projekt:** Wireshark dla GenZ (TS + Python) — pisany z AI
 
 ---
 
-## Miesiąc 2: OOP + zaawansowany Python
+## Modul 1: Python dla ludzi z Javy
 
-- [ ] Podstawy OOP: klasy, dziedziczenie, enkapsulacja
-- [ ] Dekoratory (funkcje i klasy)
-- [ ] Generatory i iteratory
-- [ ] Context managers (własne)
-- [ ] Typowanie: typing, mypy, TypeVar, Protocol
-- [ ] dataclasses i attrs
-- [ ] Enumy
-- [ ] Logging (moduł logging)
-- [ ] Virtual environments, pip, requirements.txt
+**Cel:** Przelozyc Java-owe koncepty na Pythona. Krotko, na temat.
 
----
+- [x] Skladnia: co jest inaczej niz w Javie
+- [x] Kolekcje: listy, dicty, sety (inne niz w Javie)
+- [x] OOP: self, brak private/public, property ✅ (zadanie 01 + 02)
+- [x] @staticmethod, @classmethod, dataclass ✅ (zadanie 02)
+- [ ] Typy, Funkcje, Context Managers ← W TRAKCIE (zadanie 03)
+- [x] Comprehensions: Pythonowy flex
+- [x] Context managers: try-with-resources po Pythonowemu
+- [ ] Moduly: import, __init__.py, pip
 
-## Miesiąc 3: Async + wzorce projektowe
-
-- [ ] asyncio: async/await, Task, gather, semaphore
-- [ ] aiohttp, aiofiles
-- [ ] Wzorce projektowe: Strategy, Observer, Factory, Singleton, Repository
-- [ ] SOLID w praktyce
-- [ ] Composition over inheritance
+**Status:** 🔄 W trakcie
 
 ---
 
-## Miesiąc 4: FastAPI + bazy danych
+## Modul 2: Async + FastAPI
 
-- [ ] FastAPI: routing, dependency injection, middleware
-- [ ] Pydantic: walidacja, serializacja, modele
-- [ ] SQLAlchemy 2.0: ORM, relacje, migracje (Alembic)
-- [ ] PostgreSQL: zapytania, indeksy, transakcje
+**Cel:** Rozumiec jak dziala Pythonowy async i glowny framework backendowy.
+
+- [ ] asyncio: event loop, async/await, Task
+- [ ] FastAPI: routing, DI, middleware, Pydantic
+- [ ] SQLAlchemy: ORM, relacje, migracje
 - [ ] Uwierzytelnianie: JWT, OAuth2
-- [ ] Testy: pytest, httpx, factory_boy, fixtures
-- [ ] Docker: Dockerfile, docker-compose, wielofazowe buildy
+
+**Status:** ⏳ Nie zaczety
 
 ---
 
-## Miesiąc 5: Architektura + refaktor
+## Modul 3: Testy + Review kodu AI
 
-- [ ] Clean Architecture (warstwy, zasady zależności)
-- [ ] DDD: aggregates, entities, value objects, domain events
-- [ ] CQRS (podstawy)
-- [ ] Event-driven architecture
-- [ ] Hexagonal Architecture (ports & adapters)
+**Cel:** Moc ocenic czy AI dobrze wygenerowal kod. Umiec napisac testy.
 
----
+- [ ] pytest: fixtures, parametrize, mock
+- [ ] Ocena kodu AI: co sprawdzac, antywzorce
+- [ ] Code review checklist
 
-## Miesiąc 6-7: DevOps + platform engineering
-
-- [ ] Kubernetes operators w Pythonie
-- [ ] Automatyzacja infrastruktury skryptami Python
-- [ ] Monitoring i observability
-- [ ] CI/CD pipeline w Pythonie
-- [ ] CLI tools (Click, Typer)
+**Status:** ⏳ Nie zaczety
 
 ---
 
-## Miesiąc 8: AI i LLM
+## Modul 4: Twoj projekt — Wireshark dla GenZ
 
-- [ ] OpenAI API, Anthropic API
-- [ ] RAG: wektory, embeddings, bazy wektorowe
-- [ ] MCP (Model Context Protocol)
-- [ ] AI Agents: LangGraph, CrewAI
-- [ ] Prompt engineering
+**Cel:** Dociagnac projekt, rozumiec architektur, moc go zaprezentowac.
+
+- [ ] Przeglad obecnego stanu projektu
+- [ ] Refaktor: co poprawic
+- [ ] Architektura: co i dlaczego
+- [ ] Deploy: Docker, CI/CD
+
+**Status:** ⏳ Nie zaczety
 
 ---
 
-## Miesiąc 9: Go + portfolio
+## Modul 5: Rozmowa kwalifikacyjna
 
-- [ ] Go: składnia, typy, goroutines, channels
-- [ ] Go: interfejsy, error handling
-- [ ] Go: budowanie CLI i serwisów HTTP
-- [ ] Finalne portfolio: 3-5 projektów na GitHubie
+**Cel:** Przejsc rozmowe na mida. Wiedziec co powiedziec, czego nie mowic.
+
+- [ ] Pytania techniczne: Python, FastAPI, OOP, async
+- [ ] System design: jak projektowac API
+- [ ] Behavioral: co powiedziec o swoim doswiadczeniu
+- [ ] Mock interviews
+
+**Status:** ⏳ Nie zaczety
+
+---
+
+## Co juz umiem (z poprzedniego planu)
+
+- [x] Podstawy Pythona: zmienne, typy, operatory
+- [x] Kolekcje: listy, krotki, slowniki, zbiory
+- [x] Kontrola przeplywu: if/elif/else, for, while
+- [x] Funkcje: argumenty, *args, **kwargs
+- [x] Comprehensions: list, dict, set
+- [x] Obsluga bledow: try/except/finally
+- [x] Moduly i pakiety: import, __init__.py, pip
+- [x] Praca z plikami: open, context managers
 
 ---
 
 ## Notatki z sesji
 
-<!-- Tutaj będą dopisywane notatki po każdej sesji nauki -->
+### Sesja 2 — 2026-09-28
 
+**Co zrobilismy:**
+- Poprawiono zadanie 01-motorcycle.py (5 bledow)
+- Dodano zadanie 02-motorcycle-advanced.py (@staticmethod, @classmethod, @dataclass)
+- Dodano zadanie 03-functions-types-context.py (type hints, *args/**kwargs, context managers)
+
+**Co uzytkownik rozumie:**
+- self, __init__, @property, @setter
+- _underscore = konwencja "prywatnego" pola
+- @staticmethod vs @classmethod (kiedy co)
+- Dlaczego from_string() to classmethod (jajko i kura)
+- _count = zmienna klasy (shared między instancjami)
+
+**Do poprawy:**
+- from_string() — brak int() na engine_cc (linia 128)
+- Unicode error na → w tescie (Windows)
+
+---
+
+## Do zrobienia przed nastepna sesja
+
+### Zadanie 02 — popraw engine_cc:
+```python
+# Linia 128 w from_string():
+engine_cc = int(parsed[3])  # bylo: parsed[3]
+```
+
+### Zadanie 03 — nowe:
+1. ETAP 1: calculate_bmi() + get_bmi_category()
+2. ETAP 2: build_url() z *args i **kwargs
+3. ETAP 3: DatabaseConnection context manager
+
+### Nastepna sesja:
+- Moduly: import, __init__.py, pip
+- Przejscie do Modulu 2: Async + FastAPI
