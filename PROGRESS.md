@@ -113,19 +113,29 @@
 
 ---
 
+### Sesja 3 — 2026-09-28
+
+**Co zrobilismy:**
+- Zadanie 02 zakonczone (int() fix, unicode fix)
+- Zadanie 03 wytlumaczone i gotowe do zrobienia
+
+**Co uzytkownik rozumie:**
+- @staticmethod vs @classmethod (jajko i kura)
+- _underscore = konwencja prywatnosci
+- Dlaczego from_string to classmethod
+
+**Do zrobienia:**
+- Zadanie 03: calculate_bmi, build_url, DatabaseConnection
+- Nastepna sesja: Moduly (import, __init__.py, pip)
+
+---
+
 ## Do zrobienia przed nastepna sesja
 
-### Zadanie 02 — ✅ poprawione:
-```python
-# Linia 128 w from_string():
-engine_cc = int(parsed[3])  # DONE
-```
-# Unicode error tez naprawiony (-> zamiast → w print)
-
-### Zadanie 03 — nowe:
-1. ETAP 1: calculate_bmi() + get_bmi_category()
-2. ETAP 2: build_url() z *args i **kwargs
-3. ETAP 3: DatabaseConnection context manager
+### Zadanie 03 — gotowe do zrobienia:
+1. ETAP 1: `calculate_bmi()` + `get_bmi_category()` — type hints
+2. ETAP 2: `build_url()` — *args, **kwargs
+3. ETAP 3: `DatabaseConnection` — context manager (__enter__, __exit__)
 
 ### Nastepna sesja:
 - Moduly: import, __init__.py, pip
