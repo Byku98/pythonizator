@@ -194,11 +194,15 @@ class MotorcycleDC:
     brand: str
     model: str
     year: int
-    engine_cc: int
+    _engine_cc: int
     
     @property
     def age(self) -> int:
         return 2026 - self.year
+    
+    @property
+    def engine_cc(self) -> int:
+        return self._engine_cc
     
     @engine_cc.setter
     def engine_cc(self, value: int):
@@ -207,7 +211,7 @@ class MotorcycleDC:
         self._engine_cc = value
     
     def specs(self) -> str:
-        return f"{self.brand} {self.model} ({self.year}), {self.engine_cc}cc, {self.age} lat"
+        return f"{self.brand} {self.model} ({self.year}), {self._engine_cc}cc, {self.age} lat"
     
 #
 # Co @dataclass robi za Ciebie:
