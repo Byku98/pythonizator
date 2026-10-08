@@ -75,15 +75,26 @@ def find_user(users: List[str], name: str) -> Optional[str]:
 
 # Twoj kod tutaj:
 
+def calculate_bmi(weight_kg: float, height_m: float) -> float:
+    return weight_kg/pow(height_m,2)
+
+def get_bmi_category(bmi: float) -> str:
+    if(bmi<18.5):
+        return "niedowaga"
+    elif(bmi>=18.5 and bmi<=24.9):
+        return "norma"
+    elif(bmi>=25 and bmi<=29.9):
+        return "nadwaga"
+    else:
+        return "otylosc"
 
 # --- Test ETAP 1 ---
-# bmi = calculate_bmi(75, 1.80)
-# print(f"BMI: {bmi:.1f}")                    # 23.1
-# print(f"Kategoria: {get_bmi_category(bmi)}")  # "norma"
-#
-# bmi2 = calculate_bmi(100, 1.70)
-# print(f"BMI: {bmi2:.1f}")                    # 34.6
-# print(f"Kategoria: {get_bmi_category(bmi2)}")  # "otylosc"
+bmi = calculate_bmi(75, 1.80)
+print(f"BMI: {bmi:.1f}")                    # 23.1
+print(f"Kategoria: {get_bmi_category(bmi)}")  # "norma"
+bmi2 = calculate_bmi(100, 1.70)
+print(f"BMI: {bmi2:.1f}")                    # 34.6
+print(f"Kategoria: {get_bmi_category(bmi2)}")  # "otylosc"
 
 
 # ==========================================
@@ -154,19 +165,31 @@ def create_person(name: str, *hobbies: str, **extra) -> dict:
 
 # Twoj kod tutaj:
 
+def build_url(base_url: str, *paths, **params):
+    url=f"{base_url}"
+    flag: bool = 0
+    
+    for path in paths:
+        url+=f"/{path}"
+    
+    if(len(params)>0):
+        url+="?"
+        flag=1
+        
+    for key, value in params.items():
+        url+=f"{key}={value}&"
+
+    return url[:-1] if flag else url
 
 # --- Test ETAP 2 ---
-# print(sum_all(1, 2, 3, 4, 5))              # 15
-# print_info(name="Kowalski", age=30, city="Warszawa")
-#
-# url1 = build_url("https://example.com", "api", "users", page=1, limit=10)
-# print(url1)  # "https://example.com/api/users?page=1&limit=10"
-#
-# url2 = build_url("https://example.com", "api", "health")
-# print(url2)  # "https://example.com/api/health"
-#
-# person = create_person("Kowalski", "motocykle", "programowanie", age=30, city="Warszawa")
-# print(person)
+print(sum_all(1, 2, 3, 4, 5))              # 15
+print_info(name="Kowalski", age=30, city="Warszawa")
+url1 = build_url("https://example.com", "api", "users", page=1, limit=10)
+print(url1)  # "https://example.com/api/users?page=1&limit=10"
+url2 = build_url("https://example.com", "api", "health")
+print(url2)  # "https://example.com/api/health"
+person = create_person("Kowalski", "motocykle", "programowanie", age=30, city="Warszawa")
+print(person)
 
 
 # ==========================================
@@ -259,29 +282,29 @@ class Timer:
 # FINALNY TEST
 # ==========================================
 
-if __name__ == "__main__":
-    print("=== ETAP 1: Type Hints ===")
-    bmi = calculate_bmi(75, 1.80)
-    print(f"BMI: {bmi:.1f}")
-    print(f"Kategoria: {get_bmi_category(bmi)}")
-    
-    bmi2 = calculate_bmi(100, 1.70)
-    print(f"BMI: {bmi2:.1f}")
-    print(f"Kategoria: {get_bmi_category(bmi2)}")
-    
-    print("\n=== ETAP 2: *args **kwargs ===")
-    print(f"sum_all(1,2,3,4,5) = {sum_all(1, 2, 3, 4, 5)}")
-    
-    url1 = build_url("https://example.com", "api", "users", page=1, limit=10)
-    print(f"URL: {url1}")
-    
-    url2 = build_url("https://example.com", "api", "health")
-    print(f"URL: {url2}")
-    
-    person = create_person("Kowalski", "motocykle", "programowanie", age=30)
-    print(f"Person: {person}")
-    
-    print("\n=== ETAP 3: Context Manager ===")
-    with DatabaseConnection("postgresql://localhost/mydb") as db:
-        db.query("SELECT * FROM users")
-        db.query("SELECT * FROM orders")
+#if __name__ == "__main__":
+#    print("=== ETAP 1: Type Hints ===")
+#    bmi = calculate_bmi(75, 1.80)
+#    print(f"BMI: {bmi:.1f}")
+#    print(f"Kategoria: {get_bmi_category(bmi)}")
+#    
+#    bmi2 = calculate_bmi(100, 1.70)
+#    print(f"BMI: {bmi2:.1f}")
+#    print(f"Kategoria: {get_bmi_category(bmi2)}")
+#    
+#    print("\n=== ETAP 2: *args **kwargs ===")
+#    print(f"sum_all(1,2,3,4,5) = {sum_all(1, 2, 3, 4, 5)}")
+#    
+#    url1 = build_url("https://example.com", "api", "users", page=1, limit=10)
+#    print(f"URL: {url1}")
+#    
+#    url2 = build_url("https://example.com", "api", "health")
+#    print(f"URL: {url2}")
+#    
+#    person = create_person("Kowalski", "motocykle", "programowanie", age=30)
+#    print(f"Person: {person}")
+#    
+#    print("\n=== ETAP 3: Context Manager ===")
+#    with DatabaseConnection("postgresql://localhost/mydb") as db:
+#        db.query("SELECT * FROM users")
+#        db.query("SELECT * FROM orders")
